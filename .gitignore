@@ -1,0 +1,15 @@
+venv/
+
+adm_departamentos_funcionarios/__pycache__/
+
+adm_departamentos_funcionarios/migrations/__pycache__/
+
+adm_departamentos_funcionarios/migrations/__pycache__/0001_initial.py
+
+igs_software/__pycache__/
+
+apoio.txt
+
+intrucoes.txt
+
+meu_banco_de_dados.sqlite3
