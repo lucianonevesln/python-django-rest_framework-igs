@@ -10,6 +10,43 @@
 
 ### - SQLite3;
 
+## Instruções Para Uso (Windows):
+
+### 1 - Crie um ambiente virtual com o comando : python -m venv venv;
+
+### 2 - Execute o ambiente virtual : venv\Scripts\activate;
+
+### 3 - clone o repositório com : git clone https://github.com/lucianonevesln/python-django-rest_framework-igs.git;
+
+### 4 - Execute o comando : pip install -r requirements.txt;
+
+### 5 - Execute o comando : python manage.py makemigrations;
+
+### 6 - Execute o comando : python manage.py migrate;
+
+### 7 - Execute o comando : python manage.py runserver;
+
+### 8 - Para inserir/editar um departamento no banco de dados, insira o json abaixo no text area 'Content:', na url 'departamento-cadastrar/':
+
+{
+    "id": 1,
+    "nome_departamento": "Desenvolvimento de Software"
+}
+
+### 9 - Para inserir/editar um novo departamento no banco de dados, insira o json abaixo no text area 'Content:', na url 'funcionario-cadastrar/':
+
+{
+    "id": 1,
+    "nome_funcionario": "Luciano Neves",
+    "email": "lucianoneves@email.com",
+    "salario": "10000.00",
+    "id_departamento": 1
+}
+
+### 10 - Para desligar o servidor, execute o comando : Ctrl + C;
+
+### 11 - Para desativar o ambiente virtual, execute o comando : venv\Scripts\deactivate;
+
 ## Imagens da Aplicação:
 
 ![alt text](https://github.com/lucianonevesln/python-django-rest_framework-igs/blob/main/static/img/Screenshot_1.png)
