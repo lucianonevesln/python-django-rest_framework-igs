@@ -26,7 +26,24 @@ SECRET_KEY = 'django-insecure-1$50f1z(&zuf!bikf_d9c7+b4398ky918gls^!2c+m*mjcbzp!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+]
+
+
+APPEND_SLASH = True
+
+
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:8000',
+]
+
+
+CORS_ALLOW_CREDENTIALS = False
 
 
 # Application definition
@@ -40,16 +57,23 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'adm_departamentos_funcionarios.apps.AdmDepartamentosFuncionariosConfig',
     'rest_framework',
+    'corsheaders',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    'http://127.0.0.1:8000',
 ]
 
 ROOT_URLCONF = 'igs_software.urls'
